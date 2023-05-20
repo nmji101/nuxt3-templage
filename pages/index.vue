@@ -1,7 +1,5 @@
 <template>
-  <client-only>
-    <MenuList/>
-  </client-only>
+  <div>메인화면입니다.</div>
 </template>
 
 <script setup lang="ts">

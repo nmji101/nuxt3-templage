@@ -1,5 +1,7 @@
 <template>
-  <n-menu :options="menuOptions"/>
+  <div>
+    <n-menu :options="menuOptions"/>
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -26,13 +28,13 @@ const menuOptions: MenuOption[] = [
                 name: 'home',
                 params: {
                   lang: 'en-US'
-                }
+                },
               }
             },
             'Going Home'
         ),
     key: 'go-back-home',
-    icon: renderIcon(HomeIcon)
+    icon: renderIcon(HomeIcon),
   },
   {
     key: 'divider-1',

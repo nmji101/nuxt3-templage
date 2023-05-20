@@ -1,7 +1,8 @@
 <template>
+  <CommonSearchForm/>
   <UserList/>
   <n-button tertiary type="primary" @click="toHome">
-    Primary
+    toHome
   </n-button>
 </template>
 
