@@ -3,7 +3,7 @@
       ref="formRef"
       inline
       :label-width="80"
-      :model="formValue"
+      v-model="formValue"
       :rules="rules"
   >
     <n-form-item label="Name" path="user.name">
@@ -34,7 +34,8 @@ const formValue =  ref({
   phone: '',
   address: ''
 });
-   const rules = {
+
+const rules = {
   user: {
     name: {
       required: true,

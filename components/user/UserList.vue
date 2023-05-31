@@ -68,29 +68,7 @@ const pagination = {
   pageSize: 10
 }
 //TODO user 가데이터 -> 입력데이터로 변환필요
-const userList = ref<Array<User>>([
-  {
-    key: 0,
-    name: 'John Brown',
-    age: 32,
-    address: 'New York No. 1 Lake Park',
-    tags: ['nice', 'developer']
-  },
-  {
-    key: 1,
-    name: 'Jim Green',
-    age: 42,
-    address: 'London No. 1 Lake Park',
-    tags: ['wow']
-  },
-  {
-    key: 2,
-    name: 'Joe Black',
-    age: 32,
-    address: 'Sidney No. 1 Lake Park',
-    tags: ['cool', 'teacher']
-  }
-]);
+const { data: userList } = await useFetch('/api/userList');
 </script>
 
 <style scoped>
