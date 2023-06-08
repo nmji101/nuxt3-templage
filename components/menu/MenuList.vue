@@ -23,13 +23,10 @@ const menuOptions: MenuOption[] = [
   {
     label: () =>
         h(
+            'a',
             {
-              to: {
-                name: 'home',
-                params: {
-                  lang: 'en-US'
-                },
-              }
+              href: '/',
+              rel: 'home',
             },
             'Going Home'
         ),
