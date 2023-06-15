@@ -12,8 +12,8 @@ import {
   PersonOutline as PersonIcon,
   WineOutline as WineIcon,
   HomeOutline as HomeIcon,
+  CalendarOutline as CalendarIcon,
 } from '@vicons/ionicons5'
-import {RouterLink} from "vue-router";
 
 function renderIcon (icon: Component) {
   return () => h(NIcon, null, { default: () => h(icon) })
@@ -63,9 +63,17 @@ const menuOptions: MenuOption[] = [
     ]
   },
   {
-    label: 'Menu2',
-    key: 'menu2',
-    icon: renderIcon(BookIcon),
+    label: () =>
+      h(
+        'a',
+        {
+          href: '/calendar',
+          rel: 'calendar',
+        },
+        'calendar'
+      ),
+    key: 'calendar',
+    icon: renderIcon(CalendarIcon),
   },
   // {
   //   label: 'Dance Dance Dance',
