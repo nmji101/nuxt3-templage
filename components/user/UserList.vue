@@ -68,7 +68,7 @@ const pagination = {
   pageSize: 10
 }
 //TODO user 가데이터 -> 입력데이터로 변환필요
-const { data: userList } = await useFetch('/api/userList');
+const { data: userList } = await useFetch('/temp/api/userList');
 </script>
 
 <style scoped>

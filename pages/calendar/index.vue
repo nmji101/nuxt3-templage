@@ -19,6 +19,10 @@ definePageMeta({
   name: "calendar"
 })
 
+const { data, error } = await useFetch('/api/calendar');
+console.log('data', data.value)
+console.log('error', error.value)
+
 const message = useMessage()
 
 const value= ref(Date.now());
