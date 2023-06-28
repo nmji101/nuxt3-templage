@@ -19,7 +19,9 @@ definePageMeta({
   name: "calendar"
 })
 
-const { data, error } = await useFetch('/api/calendar');
+const { data, refresh, error } = await useFetch('/api/calendar', {
+  immediate: false,
+});
 console.log('data', data.value)
 console.log('error', error.value)
 
@@ -40,6 +42,9 @@ const isDateDisabled  = (timestamp: number)  => {
   }
   return false
 };
+onMounted(() => {
+  refresh();
+})
 </script>
 <style scoped>
 </style>
